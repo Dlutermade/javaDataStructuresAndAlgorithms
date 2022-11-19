@@ -72,7 +72,7 @@ public class Queue_Array3 {
     if (i_front == null && i_end == null) {
       return 0;
     }
-    return (i_end - i_front + 1 + queue.length) % queue.length;
+    return (i_end - i_front + queue.length) % queue.length + 1;
   }
 
   public static void main(String[] args) {

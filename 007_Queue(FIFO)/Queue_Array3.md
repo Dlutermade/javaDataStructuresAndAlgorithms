@@ -65,12 +65,12 @@ private int size() {
   if (i_front == null && i_end == null) {
     return 0;
   }
-  return (i_end - i_front + 1 + queue.length) % queue.length;
+    return (i_end - i_front + queue.length) % queue.length + 1;
 }
 ```
 
-1. 當讀頭和寫頭重疊時候，是一個元素所以需要+1
-2. 環狀佇列可能發生 i_front大於i_end的情況因此需要 + queue.length % queue.length
+1. 環狀佇列可能發生 i_front大於i_end的情況因此需要 + queue.length % queue.length
+2. 當讀頭和寫頭重疊時候，是一個元素所以需要+1
 
 ---
 
