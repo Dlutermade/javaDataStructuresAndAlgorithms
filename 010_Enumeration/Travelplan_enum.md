@@ -47,7 +47,6 @@ private void enumeration_recursion(Integer constraint_hour) {
       System.out.print("[X]:");
       print_result(hour_total);
     }
-    return;
   }
 
   for (int i = 0; i < c_remained.length; i++) {

@@ -1,7 +1,9 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Travelplan_enum {
+public class Travelplan_backtracking {
+
   Integer[][] hours;
   String[] c_remained = { "NP", "IS", "CA", "UK", "US" };
 
@@ -65,25 +67,32 @@ public class Travelplan_enum {
     return null;
   }
 
-  // enumeration
+  // enumeration -> backtracking
   List<String> route = new ArrayList<>();
 
-  public void enumeration(Integer constraint_hour) {
+  public void backtracking(Integer constraint_hour) {
     String c_start = "NP";
     route.add(c_start);
     c_remained[0] = null;
 
-    enumeration_recursion(constraint_hour);
+    backtracking_recursion(constraint_hour);
   }
 
-  private void enumeration_recursion(Integer constraint_hour) {
+  private void backtracking_recursion(Integer constraint_hour) {
+    int hour_total = get_hour_total();
+
     if (route.size() == 5) {
-      int hour_total = get_hour_total();
       if (hour_total < constraint_hour) {
         print_result(hour_total);
       } else {
         System.out.print("[X]: ");
         print_result(hour_total);
+      }
+    } else {
+      if (hour_total >= constraint_hour) {
+        System.out.print("[backtracked]: ");
+        print_result(hour_total);
+        return;
       }
     }
 
@@ -97,7 +106,7 @@ public class Travelplan_enum {
       route.add(c_next);
       c_remained[i] = null;
 
-      enumeration_recursion(constraint_hour);
+      backtracking_recursion(constraint_hour);
 
       route.remove(c_next);
       c_remained[i] = c_next;
@@ -132,9 +141,9 @@ public class Travelplan_enum {
   }
 
   public static void main(String[] args) {
-    Travelplan_enum tp = new Travelplan_enum();
+    Travelplan_backtracking tp = new Travelplan_backtracking();
     tp.build_hour_table();
     Integer hour_constraint = 60; // 65 ~ 100
-    tp.enumeration(hour_constraint);
+    tp.backtracking(hour_constraint);
   }
 }
