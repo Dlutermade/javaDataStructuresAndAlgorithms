@@ -19,8 +19,8 @@
 | Insert (by value) | 直接放最後面            | O(1)  |                             |
 | Insert (by index) | 可能需要擴展或是推動    |       |                             |
 | Insert (expand)   | 擴展/推動動作稱為expand | +O(n) |                             |
-| Delete (by value) | 先搜尋再推移            | O(n)  |                             |
-| Delete (by index) | 直接刪除再推移          | O(n)  | 比把by index更慢 但還是O(n) |
+| Delete (by value) | 先搜尋再推移            | O(n)  | 比把by index更慢 但還是O(n) |
+| Delete (by index) | 直接刪除再推移          | O(n)  |                             |
 
 
 ## Linked List
