@@ -44,6 +44,4 @@
 1. 不適合刪除
 
 
-**有index想要搜尋用Array，新增多的地方用LinkedList**
-
----
+**用位置搜尋多使用Array，新增或插入多則用LinkedList**
