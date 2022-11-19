@@ -1,4 +1,4 @@
-#### offer
+## offer
 ```java
 public void offer(Integer val) {
   if (node_front == null) {
@@ -17,7 +17,7 @@ public void offer(Integer val) {
 
 ---
 
-#### offer
+## offer
 ```java
 public Integer poll() {
   if (node_front == null) {

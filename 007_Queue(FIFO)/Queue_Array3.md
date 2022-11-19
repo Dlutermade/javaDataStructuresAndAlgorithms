@@ -10,7 +10,7 @@ Integer i_end = null;
 3. i_front是讀頭
 4. i_end是寫頭
 
-#### offer
+## offer
 ```java
 public void offer(Integer val) {
   if (size() == queue.length) {
@@ -33,7 +33,7 @@ public void offer(Integer val) {
 
 ---
 
-#### poll
+## poll
 ```java
 public Integer poll() {
   if (size() == 0) {
@@ -59,7 +59,7 @@ public Integer poll() {
 
 ---
 
-#### size
+## size
 ```java
 private int size() {
   if (i_front == null && i_end == null) {
@@ -74,7 +74,7 @@ private int size() {
 
 ---
 
-#### expand_space
+## expand_space
 ```java
 private void expand_space() {
   Integer[] queue_new = new Integer[queue.length * 2];

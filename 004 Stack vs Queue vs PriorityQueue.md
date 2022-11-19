@@ -34,11 +34,12 @@
    所以 Read Pointer 和 Write Pointer 計算時候都會需要 mod Array的長度
 
 
-| 英文          | Stack | Queue | PriorityQueue |
-| ------------- | ----- | ----- | ------------- |
-| 中文          | 堆疊  | 佇列  | 優先權佇列    |
-| 寫入          | push  | offer | add           |
-| 讀取          | pop   | poll  | poll          |
-| 寫入 Big-O    | O(1)  | O(1)  | O(log(n))     |
-| 讀取 Big-O    | O(1)  | O(1)  | O(log(n))     |
-| 基於Array擴展 | O(n)  | O(n)  | O(n)          |
+| 英文          | Stack    | Queue    | PriorityQueue |
+| ------------- | -------- | -------- | ------------- |
+| 中文          | 堆疊     | 佇列     | 優先權佇列    |
+| 概念          | 先進後出 | 先進先出 | Heap          |
+| 寫入          | push     | offer    | add           |
+| 讀取          | pop      | poll     | poll          |
+| 寫入 Big-O    | O(1)     | O(1)     | O(log(n))     |
+| 讀取 Big-O    | O(1)     | O(1)     | O(log(n))     |
+| 基於Array擴展 | O(n)     | O(n)     | O(n)          |

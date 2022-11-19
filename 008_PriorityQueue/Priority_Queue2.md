@@ -16,5 +16,5 @@ while (true) {
 }
 ```
 
-Priority_Queue
+## Priority_Queue
 1. 預設由小到大排序 (指輸出順序)
