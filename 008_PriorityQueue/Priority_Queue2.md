@@ -18,6 +18,7 @@ while (true) {
 
 ## Priority_Queue
 1. 預設由小到大排序 (指輸出順序)
+2. 本質上是Heap
 
 
 ## 自訂義排序類別

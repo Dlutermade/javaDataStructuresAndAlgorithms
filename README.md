@@ -9,6 +9,7 @@
    6. Stack
    7. Queue
    8. PriorityQueue (Using built-in)
+   9. Greedy
 2. 樹系列
 3. Hash系列
 4. 平衡樹
