@@ -82,7 +82,7 @@ public class Travelplan_enum {
       if (hour_total < constraint_hour) {
         print_result(hour_total);
       } else {
-        System.out.println("[X]:");
+        System.out.print("[X]: ");
         print_result(hour_total);
       }
       return;
@@ -124,9 +124,9 @@ public class Travelplan_enum {
   private void print_result(int hour_total) {
     for (int i = 0; i < route.size(); i++) {
       System.out.print(route.get(i));
-      if (i + 1 == route.size())
-        break;
-      System.out.print("->");
+      if (i != route.size() - 1) {
+        System.out.print("->");
+      }
     }
 
     System.out.println(" : " + hour_total);

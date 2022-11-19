@@ -44,7 +44,7 @@ private void enumeration_recursion(Integer constraint_hour) {
     if (hour_total < constraint_hour) {
       print_result(hour_total);
     } else {
-      System.out.println("[X]:");
+      System.out.print("[X]:");
       print_result(hour_total);
     }
     return;
@@ -79,3 +79,27 @@ private void enumeration_recursion(Integer constraint_hour) {
 會產生所有排列組合!
 
 即枚舉出所有排列組合再透過條件印出合格解!
+
+
+## 計算距離
+```java
+private int get_hour_total() {
+  if (route.size() == 0)
+    return 0;
+  int hour_total = 0;
+  String c_start = route.get(0);
+  String c_end = null;
+  for (int i = 1; i < route.size(); i++) {
+    c_end = route.get(i);
+    hour_total += get_hour(c_start, c_end);
+
+    c_start = c_end;
+  }
+
+  return hour_total;
+}
+```
+
+1. 從路由開始取得第一個節點，慢慢往下尋找下一個端點
+2. 計算兩個位置時間
+3. 回傳加總的時間
