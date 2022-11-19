@@ -47,8 +47,8 @@ public class Greedy_Maze_Cost_B {
 
   public int go_maze(Node start, Node target) {
     // initialization
-
     pq.add(start);
+
     while (true) {
 
       if (pq.size() == 0) {
@@ -57,7 +57,7 @@ public class Greedy_Maze_Cost_B {
       /** pick the node with lowest cost **/
       Node now = pq.poll();
 
-      // 因為pq保證成本最小的優先，所以可以確定裡面的成本都會是最小的
+      // 因為pq保證成本最小的優先，所以如果maze_bset[][]有值則不用繼續產生
       if (maze_bset[now.row][now.col] != null) {
         continue;
       }

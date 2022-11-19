@@ -41,8 +41,8 @@ public class Greedy_Maze_Cost_A {
 
   public int go_maze(Node start, Node target) {
     // initialization
-
     pq.add(start);
+
     while (true) {
 
       if (pq.size() == 0) {
