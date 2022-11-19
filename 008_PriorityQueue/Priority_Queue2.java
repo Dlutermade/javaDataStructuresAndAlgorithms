@@ -18,7 +18,6 @@ public class Priority_Queue2 {
 
     @Override
     public int compare(Person p1, Person p2) {
-      // p1.peepee_wait_time.compareTo(p2.peepee_wait_time)
       return p1.peepee_wait_time - p2.peepee_wait_time;
     }
   }
@@ -53,6 +52,8 @@ public class Priority_Queue2 {
     for (Person i : ppl) {
       pq_ppl.add(i);
     }
+
+    System.out.print("\nPriorityQueue Person ");
 
     while (true) {
       if (pq_ppl.size() == 0) {
