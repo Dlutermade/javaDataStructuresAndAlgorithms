@@ -69,7 +69,8 @@ private int size() {
 }
 ```
 
-1. 環狀佇列可能發生 i_front大於i_end的情況因此需要 + queue.length % queue.length
+1. 當讀頭和寫頭重疊時候，是一個元素所以需要+1
+2. 環狀佇列可能發生 i_front大於i_end的情況因此需要 + queue.length % queue.length
 
 ---
 

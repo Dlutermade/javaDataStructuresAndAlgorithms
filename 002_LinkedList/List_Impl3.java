@@ -1,5 +1,3 @@
-import java.lang.annotation.Target;
-
 public class List_Impl3 {
 
   static class Node {
