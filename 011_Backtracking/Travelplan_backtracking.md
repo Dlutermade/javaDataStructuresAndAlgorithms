@@ -39,13 +39,19 @@ public void enumeration(Integer constraint_hour) {
 ## 遞迴函數
 ```java
 private void enumeration_recursion(Integer constraint_hour) {
+  int hour_total = get_hour_total();
   if (route.size() == 5) {
-    int hour_total = get_hour_total();
     if (hour_total < constraint_hour) {
       print_result(hour_total);
     } else {
-      System.out.print("[X]:");
+      System.out.print("[X]: ");
       print_result(hour_total);
+    }
+  } else {
+    if (hour_total >= constraint_hour) {
+      System.out.print("[backtracked]: ");
+      print_result(hour_total);
+      return;
     }
   }
 
@@ -66,18 +72,19 @@ private void enumeration_recursion(Integer constraint_hour) {
 }
 ```
 
-1. 如果路由走到底則開始計算總時長
-   開始判斷印出是否合格
-2. 反之進入迴圈
-3. 如果國家已取出則跳過這圈迴圈
+1. 開始計算當前總時長
+2. 如果路由走到底開始判斷是否合格並輸出
+3. 反之判斷當前總時長是否超時，超時則結束遞迴
+4. 進入迴圈
+5. 如果國家已取出則跳過這圈迴圈
    反之繼續
-4. 取得國家，添加到路由，並清空該國家
-5. 展開遞迴
-6. 遞迴結束，清調路由，並歸還國家
+6. 取得國家，添加到路由，並清空該國家
+7. 展開遞迴
+8. 遞迴結束，清調路由，並歸還國家
 
-會產生所有排列組合!
+不會產生所有排列組合!
 
-即枚舉出所有排列組合再透過條件印出合格解!
+當下如果超時則結束遞迴並開始回朔
 
 
 ## 計算距離
