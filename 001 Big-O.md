@@ -12,15 +12,15 @@
 
 ## Array
 
-| 動作              | 解釋                    | big-O | 備註                        |
-| ----------------- | ----------------------- | ----- | --------------------------- |
-| Search (by value) | 一個一個查              | O(n)  |                             |
-| Search (by index) | 直接算出記憶體位置      | O(1)  |                             |
-| Insert (by value) | 直接放最後面            | O(1)  |                             |
-| Insert (by index) | 可能需要擴展或是推動    |       |                             |
-| Insert (expand)   | 擴展/推動動作稱為expand | +O(n) |                             |
-| Delete (by value) | 先搜尋再推移            | O(n)  | 比把by index更慢 但還是O(n) |
-| Delete (by index) | 直接刪除再推移          | O(n)  |                             |
+| 動作              | 解釋                         | big-O | 備註                      |
+| ----------------- | ---------------------------- | ----- | ------------------------- |
+| Search (by value) | 一個一個查                   | O(n)  |                           |
+| Search (by index) | 直接算出記憶體位置           | O(1)  |                           |
+| Insert (by value) | 直接放最後面，低機率需要擴展 | O(1)  |                           |
+| Insert (by index) | 可能需要擴展或是推動         |       | 推動即O(n)                |
+| Insert (expand)   | 擴展動作稱為expand           | +O(n) |                           |
+| Delete (by value) | 先搜尋再推移                 | O(n)  | 比by index更慢 但還是O(n) |
+| Delete (by index) | 直接刪除再推移               | O(n)  |                           |
 
 
 ## Linked List
