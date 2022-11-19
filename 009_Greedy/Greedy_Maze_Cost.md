@@ -26,6 +26,8 @@ public int go_maze(int row_start, int col_start, int row_target, int col_target)
 
 1. 起點沒有成本，可以直接是自己
 
+---
+
 ## 走迷宮 (Overload)
 
 ```java
@@ -74,6 +76,8 @@ public int go_maze(Node start, Node target) {
 5. 將 最低成本Node的位置 賦予 取得的最低成本Node
 6. 增加往四個方向走的成本結點進pq
 7. 迴圈結束 回傳 目標位置的最短路徑
+
+---
 
 ## 貪婪規則
 1. 從A點開始向外擴散，且最低成本路徑優先

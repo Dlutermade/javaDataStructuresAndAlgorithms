@@ -21,7 +21,6 @@ Integer[][] hours =  {
 
 
 ## 起動遞迴函數
-
 ```java
 public void enumeration(Integer constraint_hour) {
   String c_start = "NP";
@@ -31,6 +30,7 @@ public void enumeration(Integer constraint_hour) {
   enumeration_recursion(constraint_hour);
 }
 ```
+
 1. 紀錄起點到route
 2. 將起點從國家陣列中清空
 
@@ -79,6 +79,7 @@ private void enumeration_recursion(Integer constraint_hour) {
 
 即枚舉出所有排列組合再透過條件印出合格解!
 
+---
 
 ## 計算距離
 ```java

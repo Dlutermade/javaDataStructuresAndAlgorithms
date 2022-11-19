@@ -31,6 +31,7 @@ public void enumeration(Integer constraint_hour) {
   enumeration_recursion(constraint_hour);
 }
 ```
+
 1. 紀錄起點到route
 2. 將起點從國家陣列中清空
 
@@ -86,6 +87,7 @@ private void enumeration_recursion(Integer constraint_hour) {
 
 當下如果超時則結束遞迴並開始回朔
 
+---
 
 ## 計算距離
 ```java
