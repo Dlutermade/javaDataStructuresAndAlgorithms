@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
-public class Travelplan_backtracking {
+public class Travelplan_BranchBound {
 
   Integer[][] hours;
   String[] c_remained = { "NP", "IS", "CA", "UK", "US" };
@@ -66,50 +68,91 @@ public class Travelplan_backtracking {
     return null;
   }
 
-  // enumeration -> backtracking
-  List<String> route = new ArrayList<>();
+  // enumeration -> backtracking -> branchBound
+  static class Country {
+    String name;
+    Integer index;
+    Integer hour_to_take; // by sort
 
-  public void backtracking(Integer constraint_hour) {
+    public Country(String name, Integer index, Integer hour_to_take) {
+      this.name = name;
+      this.index = index;
+      this.hour_to_take = hour_to_take;
+    }
+  }
+
+  static class myComp implements Comparator<Country> {
+
+    @Override
+    public int compare(Country c1, Country c2) {
+      return c1.hour_to_take - c2.hour_to_take; // low-> high
+    }
+
+  }
+
+  List<String> route = new ArrayList<>();
+  Integer hour_best = null;
+
+  public void branchbound() {
     String c_start = "NP";
     route.add(c_start);
     c_remained[0] = null;
 
-    backtracking_recursion(constraint_hour);
+    branchbound_recursion();
   }
 
-  private void backtracking_recursion(Integer constraint_hour) {
+  private void branchbound_recursion() {
     int hour_total = get_hour_total();
 
     if (route.size() == 5) {
-      if (hour_total < constraint_hour) {
+      if (hour_best == null || hour_total < hour_best) {
+        hour_best = hour_total;
         print_result(hour_total);
       } else {
         System.out.print("[X]: ");
         print_result(hour_total);
       }
     } else {
-      // backtracked
-      if (hour_total >= constraint_hour) {
-        System.out.print("[backtracked]: ");
+      // bound check
+      if (hour_best != null && hour_total >= hour_best) {
+        System.out.print("[bounded]: ");
         print_result(hour_total);
         return;
       }
     }
 
-    /** step01: just pick any child to continue each round **/
+    // branch strategy
+    PriorityQueue<Country> pq = new PriorityQueue<>(c_remained.length, new myComp());
+
+    // step01: sort child node by hours
+    String c_start = route.get(route.size() - 1);
     for (int i = 0; i < c_remained.length; i++) {
-      if (c_remained[i] == null)
+      if (c_remained == null) {
         continue;
+      }
 
-      String c_next = c_remained[i];
+      String c_end = c_remained[i];
+      Integer hour = get_hour(c_start, c_end);
+      Country c = new Country(c_end, i, hour);
 
-      route.add(c_next);
-      c_remained[i] = null;
+      pq.add(c);
+    }
 
-      backtracking_recursion(constraint_hour);
+    /** step02: just pick any child to continue each round **/
+    while (true) {
+      if (pq.size() == 0) {
+        break;
+      }
 
-      route.remove(c_next);
-      c_remained[i] = c_next;
+      Country c = pq.poll();
+      route.add(c.name);
+      c_remained[c.index] = null;
+
+      branchbound_recursion();
+
+      route.remove(c.name);
+      c_remained[c.index] = c.name;
+
     }
   }
 
@@ -141,9 +184,8 @@ public class Travelplan_backtracking {
   }
 
   public static void main(String[] args) {
-    Travelplan_backtracking tp = new Travelplan_backtracking();
+    Travelplan_BranchBound tp = new Travelplan_BranchBound();
     tp.build_hour_table();
-    Integer hour_constraint = 60; // 65 ~ 100
-    tp.backtracking(hour_constraint);
+    tp.branchbound();
   }
 }

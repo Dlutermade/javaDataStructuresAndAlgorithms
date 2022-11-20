@@ -12,6 +12,7 @@
    9.  Greedy
    10. Enumeration aka Brute Force
    11. Backtracking
+   12. Branch and bound
 2. 樹系列
 3. Hash系列
 4. 平衡樹
