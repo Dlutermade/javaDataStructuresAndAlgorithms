@@ -127,7 +127,7 @@ public class Travelplan_BranchBound {
     // step01: sort child node by hours
     String c_start = route.get(route.size() - 1);
     for (int i = 0; i < c_remained.length; i++) {
-      if (c_remained == null) {
+      if (c_remained[i] == null) {
         continue;
       }
 
@@ -145,6 +145,7 @@ public class Travelplan_BranchBound {
       }
 
       Country c = pq.poll();
+
       route.add(c.name);
       c_remained[c.index] = null;
 
