@@ -71,7 +71,7 @@ public class Greedy_Maze_Cost_B {
             now.row + i[0] >= maze.length ||
             now.col + i[1] < 0 ||
             now.col + i[1] >= maze.length) {
-          Node el = new Node(now.row - 1, now.col);
+          Node el = new Node(now.row + i[0], now.col + i[1]);
           el.cost = now.cost + maze[now.row][now.col];
           pq.add(el);
         }
