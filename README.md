@@ -15,6 +15,7 @@
    12. Branch and bound
    13. Divide and conquer
 2. 樹系列
+   1. Binary Tree
 3. Hash系列
 4. 平衡樹
 5. 圖系列
