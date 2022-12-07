@@ -4,13 +4,12 @@
 
 ![](./img/1670413035968.jpg)
 
-
 ## 遍歷Traversal方式
 
 1. DFS Left  左邊先走
 2. DFS Right 右邊先走
 
------
+---
 
 ## DFS Left 
 
@@ -23,7 +22,7 @@
 #### Post-Order 雙方向深入完 再印出來!
 1、3、4、2、7、6、5
 
------
+---
 
 ## DFS Right 
 

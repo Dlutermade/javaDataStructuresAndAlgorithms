@@ -66,7 +66,7 @@ public class BT_List {
     if (node == null)
       return;
 
-    System.out.println(node.val + " ");
+    System.out.print(node.val + " ");
     traverse_preorder(node.left);
     traverse_preorder(node.right);
   }
@@ -82,7 +82,7 @@ public class BT_List {
       return;
 
     traverse_inorder(node.left);
-    System.out.println(node.val + " ");
+    System.out.print(node.val + " ");
     traverse_inorder(node.right);
   }
 
@@ -98,24 +98,86 @@ public class BT_List {
 
     traverse_postorder(node.left);
     traverse_postorder(node.right);
-    System.out.println(node.val + " ");
+    System.out.print(node.val + " ");
+  }
+
+  // --------------
+
+  public void traverse_preorderRight() {
+    if (this.root == null)
+      return;
+    traverse_preorderRight(this.root);
+  }
+
+  public void traverse_preorderRight(Node node) {
+    if (node == null)
+      return;
+
+    System.out.print(node.val + " ");
+    traverse_preorderRight(node.right);
+    traverse_preorderRight(node.left);
+  }
+
+  public void traverse_inorderRight() {
+    if (this.root == null)
+      return;
+    traverse_inorderRight(this.root);
+  }
+
+  public void traverse_inorderRight(Node node) {
+    if (node == null)
+      return;
+
+    traverse_inorderRight(node.right);
+    System.out.print(node.val + " ");
+    traverse_inorderRight(node.left);
+
+  }
+
+  public void traverse_postorderRight() {
+    if (this.root == null)
+      return;
+    traverse_postorderRight(this.root);
+  }
+
+  public void traverse_postorderRight(Node node) {
+    if (node == null)
+      return;
+
+    traverse_postorderRight(node.right);
+    traverse_postorderRight(node.left);
+    System.out.print(node.val + " ");
   }
 
   public static void main(String[] args) {
     Integer[] nums = {
         5, 2, 6, 1, 4, null, 7, null, null, 3, null, null, null, null, null
     };
+    /*---------5
+     *----2---------6
+     *--1---4-----n---7
+     *-n-n-3-n---n-n-n-n
+     */
     BT_List bt = new BT_List(nums);
     bt.buildTree();
     System.out.println();
 
     /** traverse (DFS left) **/
-    System.out.println("pre-order: ");
+    System.out.println("Left\n");
+    System.out.print("pre-order: ");
     bt.traverse_preorder();
-    System.out.println("\nin-order: ");
+    System.out.print("\nin-order: ");
     bt.traverse_inorder();
-    System.out.println("\npost-order: ");
+    System.out.print("\npost-order: ");
     bt.traverse_postorder();
+    /** traverse (DFS Right) **/
+    System.out.println("Right\n");
+    System.out.print("pre-order: ");
+    bt.traverse_preorderRight();
+    System.out.print("\nin-order: ");
+    bt.traverse_inorderRight();
+    System.out.print("\npost-order: ");
+    bt.traverse_postorderRight();
   }
 
 }

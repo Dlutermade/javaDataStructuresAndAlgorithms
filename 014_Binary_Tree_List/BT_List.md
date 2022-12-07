@@ -76,7 +76,7 @@ public void traverse_preorder(Node node) {
   if (node == null)
     return;
 
-  System.out.println(node.val + " ");
+  System.out.print(node.val + " ");
   traverse_preorder(node.left);
   traverse_preorder(node.right);
 }
@@ -90,7 +90,7 @@ public void traverse_inorder(Node node) {
     return;
 
   traverse_inorder(node.left);
-  System.out.println(node.val + " ");
+  System.out.print(node.val + " ");
   traverse_inorder(node.right);
 }
 ```
@@ -104,6 +104,32 @@ public void traverse_inorder(Node node) {
 
   traverse_postorder(node.left);
   traverse_postorder(node.right);
-  System.out.println(node.val + " ");
+  System.out.print(node.val + " ");
 }
 ```
+
+---
+
+## DFS Left 
+
+#### Pre-Order 立馬印出來!
+5、2、1、4、3、6、7
+
+#### In-Order 單方向深入完 再印出來!
+1、2、3、4、5、6、7
+
+#### Post-Order 雙方向深入完 再印出來!
+1、3、4、2、7、6、5
+
+---
+
+## DFS Right 
+
+#### Pre-Order 立馬印出來!
+5、6、7、2、4、3、1
+
+#### In-Order 單方向深入完 再印出來!
+7、6、5、4、3、2、1
+
+#### Post-Order 雙方向深入完 再印出來!
+7、6、3、4、1、2、5
