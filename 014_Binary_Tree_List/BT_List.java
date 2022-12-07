@@ -171,7 +171,7 @@ public class BT_List {
     System.out.print("\npost-order: ");
     bt.traverse_postorder();
     /** traverse (DFS Right) **/
-    System.out.println("Right\n");
+    System.out.println("\nRight\n ");
     System.out.print("pre-order: ");
     bt.traverse_preorderRight();
     System.out.print("\nin-order: ");
