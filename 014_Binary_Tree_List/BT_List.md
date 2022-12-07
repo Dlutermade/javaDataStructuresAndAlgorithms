@@ -110,6 +110,16 @@ public void traverse_inorder(Node node) {
 
 ---
 
+## Tree 樣子
+
+/*--------5
+*----2---------6
+*--1---4-----n---7
+*-n-n-3-n---n-n-n-n
+*/
+
+---
+
 ## DFS Left 
 
 #### Pre-Order 立馬印出來!

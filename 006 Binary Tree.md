@@ -11,6 +11,12 @@
 
 ---
 
+## 遍歷Traversal種類
+
+1. Pre-Order 立馬印出來!
+2. In-Order 單方向深入完 再印出來!
+3. Post-Order 雙方向深入完 再印出來!
+
 ## DFS Left 
 
 #### Pre-Order 立馬印出來!
