@@ -69,7 +69,7 @@ public void buildTree() {
 
 ---
 
-## Pre-Order 先印
+## 前序 Pre-Order 先印
 
 ```java
 public void traverse_preorder(Node node) {
@@ -82,7 +82,7 @@ public void traverse_preorder(Node node) {
 }
 ```
 
-## In-Order 單方向走完 再印
+## 中序 In-Order 單方向走完 再印
 
 ```java
 public void traverse_inorder(Node node) {
@@ -95,7 +95,7 @@ public void traverse_inorder(Node node) {
 }
 ```
 
-## Post-Order 雙方向走完 再印
+## 後序 Post-Order 雙方向走完 再印
 
 ```java
 public void traverse_inorder(Node node) {
@@ -112,34 +112,40 @@ public void traverse_inorder(Node node) {
 
 ## Tree 樣子
 
-/*--------5
-*----2---------6
-*--1---4-----n---7
-*-n-n-3-n---n-n-n-n
-*/
+/_--------5
+_----2---------6
+_--1---4-----n---7
+_-n-n-3-n---n-n-n-n
+\*/
 
 ---
 
-## DFS Left 
+## DFS Left
 
-#### Pre-Order 立馬印出來!
+#### 前序 Pre-Order 立馬印出來!
+
 5、2、1、4、3、6、7
 
-#### In-Order 單方向深入完 再印出來!
+#### 中序 In-Order 單方向深入完 再印出來!
+
 1、2、3、4、5、6、7
 
-#### Post-Order 雙方向深入完 再印出來!
+#### 後序 Post-Order 雙方向深入完 再印出來!
+
 1、3、4、2、7、6、5
 
 ---
 
-## DFS Right 
+## DFS Right
 
-#### Pre-Order 立馬印出來!
+#### 前序 Pre-Order 立馬印出來!
+
 5、6、7、2、4、3、1
 
-#### In-Order 單方向深入完 再印出來!
+#### 中序 In-Order 單方向深入完 再印出來!
+
 7、6、5、4、3、2、1
 
-#### Post-Order 雙方向深入完 再印出來!
+#### 後序 Post-Order 雙方向深入完 再印出來!
+
 7、6、3、4、1、2、5
