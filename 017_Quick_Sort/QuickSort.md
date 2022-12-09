@@ -109,3 +109,24 @@ private static int sort(int[] nums, int i_start, int i_pivot_guess, int i_end) {
 6. 如果 i_meeting_point >= pivot 則意味 重疊的位置有大於等於 pivot
    進行交換
 7. 反之則意味 pivot 好死不死適合的位置是最後一個位置
+
+```java
+while (true) {
+  // 尋找左右指標
+  while (i_left != i_right && nums[i_left] <= nums[i_pivot_now]) {
+    i_left++;
+  }
+
+  while (i_left != i_right && nums[i_right] >= nums[i_pivot_now]) {
+    i_right--;
+  }
+
+  if (i_left == i_right)
+    break;
+
+  swap(nums, i_left, i_right); // leverage existing array space
+}
+```
+
+這個 while 過程，保證了指標重疊之前會不斷交換
+所以 left 指標 左邊元素會小於等於 pivot 的 value，右邊元素會大於 pivot 的 value
