@@ -36,26 +36,9 @@ private static void quick_sort(int[] nums, int i_start, int i_end) {
 
 --
 
-#### 正式遞迴
+#### Hoare partition scheme
 
-```java
-private static void quick_sort(int[] nums, int i_start, int i_end) {
-  if (i_start == i_end) // 切割到只剩下一個元素
-    return;
-  if (i_start > i_end) // 上一層的陣列已經沒有多餘的元素去分出子陣列 (因為i_pivot_final-1 和 i_pivot_final+1 可能會導致 溢出)
-    return;
-
-  int i_pivot_guess = get_pivot_index(i_start, i_end);
-
-  int i_pivot_final = sort(nums, i_start, i_pivot_guess, i_end);
-
-  quick_sort(nums, i_start, i_pivot_final - 1);
-  quick_sort(nums, i_pivot_final + 1, i_end);
-
-}
-```
-
-#### 排序邏輯
+效能比 Lomuto Partition Scheme 好，使用左右指標概念
 
 ```java
 private static int sort(int[] nums, int i_start, int i_pivot_guess, int i_end) {
