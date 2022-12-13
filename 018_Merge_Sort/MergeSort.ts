@@ -38,7 +38,7 @@ const merge = (arr: number[], low: number, mid: number, high: number) => {
     pointer += 1;
   }
 
-  while (rightPointer <= mid) {
+  while (rightPointer <= high) {
     arr[pointer] = res[rightPointer - low];
     rightPointer += 1;
     pointer += 1;

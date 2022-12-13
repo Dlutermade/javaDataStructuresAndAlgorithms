@@ -1,5 +1,5 @@
 const mergeSort1 = (arr: number[]) => {
-  if (arr.length <= 1) {
+  if (arr.length < 2) {
     return arr;
   }
 
