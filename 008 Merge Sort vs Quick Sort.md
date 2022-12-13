@@ -11,6 +11,7 @@
 
 
 Merge Sort Merge
+
 ```ts
 const merge = (arr: number[], low: number, mid: number, high: number) => {
   const res = arr.slice(low, high + 1);
