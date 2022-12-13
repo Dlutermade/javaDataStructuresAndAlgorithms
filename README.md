@@ -15,8 +15,8 @@
    12. Branch and bound
    13. Divide and conquer
 2. 樹系列
-   1. Binary Tree List Implementation
-   2. Binary Tree Array Implementation
+   1. DFS Binary Tree List Implementation
+   2. DFS Binary Tree Array Implementation
    3. LeetCode 0100 Same Tree
    4. Pre-Order and Quick Sort
    5. Post-Order and Merge Sort
