@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BT_LIST_BFS {
+public class BT_List_BFS {
   class Node {
     Node left;
     Node right;
@@ -19,7 +19,7 @@ public class BT_LIST_BFS {
   private Integer[] nums;
   private Node root;
 
-  BT_LIST_BFS(Integer[] nums) {
+  BT_List_BFS(Integer[] nums) {
     this.nums = nums;
   }
 
@@ -92,7 +92,7 @@ public class BT_LIST_BFS {
      *--1---4-----n---7
      *-n-n-3-n---n-n-n-n
      */
-    BT_LIST_BFS bt = new BT_LIST_BFS(nums);
+    BT_List_BFS bt = new BT_List_BFS(nums);
     bt.buildTree();
     System.out.println();
     System.out.print("level-order: ");
