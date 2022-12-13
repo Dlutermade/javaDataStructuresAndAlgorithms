@@ -35,8 +35,8 @@ Pivot 中文 樞軸
 
 ---
 
-Best BigO log(n)\*n
-Worst BigO n\*n
+Best BigO log(n)*n
+Worst BigO n*n
 
 - 挑到的 Pivot 實際上是位於陣列中間的值 log(n)
 - 挑到的 Pivot 實際上是位於陣列最左邊或是最右邊的值 n

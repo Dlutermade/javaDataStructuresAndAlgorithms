@@ -19,6 +19,7 @@
    2. Binary Tree Array Implementation
    3. LeetCode 0100 Same Tree
    4. Pre-Order and Quick Sort
+   5. Post-Order and Merge Sort
 3. Hash 系列
 4. 平衡樹
 5. 圖系列

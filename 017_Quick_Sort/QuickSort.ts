@@ -22,7 +22,7 @@ const partition = (arr: number[], low: number, high: number) => {
     swap(arr, l, r);
   }
 
-  // arr[R+1]  >= arr[L] == arr[R] >= pivot >= arr[L-1]
+  // arr[R+1] >= arr[L] == arr[R] >= pivot >= arr[L-1]
   swap(arr, l, low);
 
   // arr[....L-1] >= pivot >= arr[R+1...]
