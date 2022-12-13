@@ -20,6 +20,7 @@
    3. LeetCode 0100 Same Tree
    4. Pre-Order and Quick Sort
    5. Post-Order and Merge Sort
+   6. BFS Binary Tree List Implementation
 3. Hash 系列
 4. 平衡樹
 5. 圖系列

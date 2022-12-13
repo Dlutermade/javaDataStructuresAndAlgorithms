@@ -4,14 +4,14 @@
 
 ![](./img/1670413035968.jpg)
 
-## 遍歷 Traversal 方式
+## 搜尋 方式
 
 1. DFS Left 左邊先走
 2. DFS Right 右邊先走
 
 ---
 
-## 遍歷 Traversal 種類
+## 遍歷 Traversal 方式
 
 1. 前序 Pre-Order 立馬印出來!
 2. 中序 In-Order 單方向深入完 再印出來!

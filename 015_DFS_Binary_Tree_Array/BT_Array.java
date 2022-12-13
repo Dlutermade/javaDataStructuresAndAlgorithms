@@ -171,8 +171,7 @@ public class BT_Array {
      *--1---4-----n---7
      *-n-n-3-n---n-n-n-n
      */
-    BT_List bt = new BT_List(nums);
-    bt.buildTree();
+    BT_Array bt = new BT_Array(nums);
     System.out.println();
 
     /** traverse (DFS left) **/
