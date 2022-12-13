@@ -22,6 +22,7 @@
    5. Post-Order and Merge Sort
    6. BFS Binary Tree List Implementation
    7. BFS Binary Tree Array Implementation
+   8. BST Binary Search Tree List Implementation
 3. Hash 系列
 4. 平衡樹
 5. 圖系列
