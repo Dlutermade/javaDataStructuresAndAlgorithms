@@ -49,6 +49,8 @@
 | Best Big-O  | log(n) | log(n) | log(n) |
 | worst Big-O | n      | n      | n      |
 
+> Array 實作 Delete 難度很高
+
 ---
 
 #### Vaildate BST
@@ -57,3 +59,5 @@
    Get Max 
 2. Root < Right Tree Min
    Get Min 
+
+需要 traverse each Sub Tree 
