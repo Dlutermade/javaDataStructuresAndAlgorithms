@@ -37,7 +37,7 @@ function isValidBST(root: TreeNode | null): boolean {
     }
   }
 
-  return isValidBST(root.left) && isValidBST(root.left);
+  return isValidBST(root.left) && isValidBST(root.right);
 }
 
 const getMax = (root: TreeNode | null) => {
