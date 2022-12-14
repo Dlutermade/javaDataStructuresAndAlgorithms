@@ -35,7 +35,7 @@ class BinarySearchTree {
       while (currentNode) {
         if (value === currentNode.value) {
           console.log("重複了");
-          break;
+          return;
         } else if (value < currentNode.value) {
           if (currentNode.left === null) {
             currentNode.left = node;
