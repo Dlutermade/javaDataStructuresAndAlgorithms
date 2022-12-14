@@ -24,6 +24,7 @@
    7. BFS Binary Tree Array Implementation
    8. BST Binary Search Tree List Implementation ( Search Insert Delete )
    9. BST Binary Search Tree Array Implementation ( Search Insert )
+   10. LeetCode 0098 Validate Binary Search Tree
 3. Hash 系列
 4. 平衡樹
 5. 圖系列

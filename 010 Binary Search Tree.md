@@ -31,9 +31,14 @@
    1. 上一個Node的 某一邊 Sub Node 
    2. 直接是 Current Node 的 Right Node
 4. 要刪除的Node，ALL Sub Node != Null
-   1. 先找出 Right Tree 最小值
-   2. 與其交換
-   3. 在 Right Tree 中刪除該Node 
+   1. Right Tree 上移
+      1. 先找出 Right Tree 最小值
+      2. 與其交換
+      3. 在 Right Tree 中刪除該Node 
+   2. Left Tree 上移
+      1. 先找出 Left Tree 最大值
+      2. 與其交換
+      3. 在 Left Tree 中刪除該Node 
 
 某一邊 Sub Node是指 Current Node 跟 Previous Node 關係
 
